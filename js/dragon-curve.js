@@ -4,10 +4,22 @@
 // rules: (A -> A+B), (B -> A-B)
 // angle: pi/2
 
+let mouseClicked;
+
+function mousePressed() {
+  mouseClicked = true;
+}
+
+function mouseReleased() {
+  mouseClicked = false;
+}
+
+
 var start = "A";
 var result = start;
 var rules = [];
-var len = 5;
+var len = 60;
+let offset;
 
 rules[0] = {
   in: "A",
@@ -45,6 +57,7 @@ function turtle() {
     resetMatrix();
     translate(width/2, height/2);
     stroke(255);
+    len *= 0.80
 
     for (var i = 0; i < result.length; i++) {
         var current = result.charAt(i);
@@ -69,4 +82,13 @@ function setup() {
   var button = createButton("create!");
   button.mousePressed(create);
   createP(start);
+}
+
+while (mouseClicked) {
+  offset = createVector(offset.x + mouseX - pmouseX, offset.y + mouseY - pmouseY);
+  createP("hello!!")
+  push();
+  translate(offset.x, offset.y);
+  turtle();
+  pop();
 }

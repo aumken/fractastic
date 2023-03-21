@@ -40,6 +40,7 @@ function turtle() {
     resetMatrix();
     translate(10, height - 10);
     stroke(255);
+    len *= 0.95
 
     for (var i = 0; i < result.length; i++) {
         var current = result.charAt(i);
