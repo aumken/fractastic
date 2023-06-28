@@ -1,5 +1,9 @@
 # fractastic
 
+Combine L-systems and Markov chains to produce stochastic fractals.
+
+Made with: p5.js, JavaScript, HTML, CSS
+
 the intersection between math and nature is where you'll find [l-systems](http://algorithmicbotany.org/papers/abop/abop.pdf). short for lindenmayer systems, l-systems provide a mathematical base for understanding plant growth, and can also be used to generate beautiful geometric structures and fractals. 
 
 l-systems are considered to be a type of 'formal grammar' -- given a language's alphabet and syntax, it describes the method in which strings can be formed. although it is most intuitive to apply formal language theory to 'human' languages, its application in l-systems enables us to produce strings given variables, rules and an axiom. and with these strings, we can create fascinating visualizations.
